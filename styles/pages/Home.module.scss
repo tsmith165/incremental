@@ -1,0 +1,10 @@
+@import "../theme/theme";
+
+.home_container { 
+  position: absolute;
+  height: calc(100% - 100px); 
+  width: 100vw; 
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  background-color: $light;
+}

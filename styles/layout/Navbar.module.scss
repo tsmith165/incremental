@@ -1,0 +1,39 @@
+@import "../theme/theme";
+
+.navbar { 
+    padding: 0 !important; 
+    overflow: hidden; 
+    background-color: $secondary;  
+}
+    .navbar_container { 
+        height: 100px; 
+        width: 100%; 
+        overflow: hidden;  
+    }
+        .navbar_logo {
+            position: relative;
+            padding: 0; 
+            width: 250px; 
+            height: 100% !important;  
+        }
+            .navbar_logo_img { 
+                min-height: 80px; 
+                padding: 10px !important; 
+            }
+    
+        // Menu Hamburger Button
+        .hamburger_button { 
+            position: absolute; 
+            top: 50px; 
+            right: 0; 
+            width: 50px !important; 
+            height: 50px !important; 
+            padding: 10px; 
+            background-color: $secondary !important; 
+            fill: $light !important; 
+            border-top-left-radius: 5px; 
+        }
+        .hamburger_button:hover { 
+            background-color: $light !important; 
+            fill: $secondary !important; 
+        }
