@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import { useState } from "react";
-import ReactTooltip from 'react-tooltip';
+import Image from 'next/image';
+import { useState, useRef, useEffect, useCallback } from "react";
+import { Tooltip } from 'react-tippy'
 
-import styles from '../styles/pages/Home.module.scss'
+import styles from '../styles/pages/Home.module.scss';
 
-import PageLayout from '../src/components/layout/PageLayout'
+import PageLayout from '../src/components/layout/PageLayout';
 
 import SchoolIcon from '@material-ui/icons/School';
 import MoodIcon from '@material-ui/icons/Mood';
@@ -62,8 +62,10 @@ const Home = ({ }) => {
 
                     {/* Skill Status Row */}
                     <div className={`${styles.status_row}`}>
-                        <div className={`${styles.status_icon_container}`}>
-                        <SchoolIcon className={styles.status_icon} data-tip='Skill Status'/>
+                      <div className={`${styles.status_icon_container}`}>
+                        <Tooltip title="Skill Status" position="top">
+                          <SchoolIcon className={styles.status_icon}/>
+                        </Tooltip>
                       </div>
                       <div className={`${styles.status_bar_container}`}>
                         <div className={`${styles.status_bar}`} style={{width: state.team_skill + '%'}}>
@@ -74,7 +76,9 @@ const Home = ({ }) => {
                     {/* Morale Status Row */}
                     <div className={`${styles.status_row}`}>
                       <div className={`${styles.status_icon_container}`}>
-                        <MoodIcon className={styles.status_icon} data-tip='Morale Status'/>
+                        <Tooltip title="Morale Status" position="top">
+                          <MoodIcon className={styles.status_icon}/>
+                        </Tooltip>
                       </div>
                       <div className={`${styles.status_bar_container}`}>
                         <div className={`${styles.status_bar}`} style={{width: state.team_morale + '%'}}>
@@ -85,7 +89,9 @@ const Home = ({ }) => {
                     {/* Overhead Status Row */}
                     <div className={`${styles.status_row}`}>
                       <div className={`${styles.status_icon_container}`}>
-                        <GroupIcon className={styles.status_icon} data-tip='Overhead Status'/>
+                        <Tooltip title="Overhead Status" position="top">
+                          <GroupIcon className={styles.status_icon}/>
+                        </Tooltip>
                       </div>
                       <div className={`${styles.status_bar_container}`}>
                         <div className={`${styles.status_bar}`} style={{width: state.team_overhead + '%'}}>
@@ -113,7 +119,9 @@ const Home = ({ }) => {
                       {/* Cash On Hand Status Row */}
                       <div className={`${styles.status_row}`}>
                         <div className={`${styles.status_icon_container}`}>
-                          <AttachMoneyIcon className={styles.status_icon} data-tip='Cash On Hand Status'/>
+                          <Tooltip title="Cash On Hand  Status" position="top">
+                            <AttachMoneyIcon className={styles.status_icon}/>
+                          </Tooltip>
                         </div>
                         <div className={`${styles.status_text_container}`}>
                           <div className={`${styles.status_text}`}>
@@ -124,7 +132,9 @@ const Home = ({ }) => {
                       {/* Sales / Day Status Row */}
                       <div className={`${styles.status_row}`}>
                         <div className={`${styles.status_icon_container}`}>
-                          <ReceiptIcon className={styles.status_icon} data-tip='Sales Per Day Status'/>
+                          <Tooltip title="Sales Per Day Status" position="top">
+                            <ReceiptIcon className={styles.status_icon}/>
+                          </Tooltip>
                         </div>
                         <div className={`${styles.status_text_container}`}>
                           <div className={`${styles.status_text}`}>
@@ -135,7 +145,9 @@ const Home = ({ }) => {
                       {/* Profit Margin Status Row */}
                       <div className={`${styles.status_row}`}>
                         <div className={`${styles.status_icon_container}`}>
-                          <LocalAtmIcon className={styles.status_icon} data-tip='Profit Margin Status'/>
+                          <Tooltip title="Profit Margin Status" position="top">
+                            <LocalAtmIcon className={styles.status_icon}/>
+                          </Tooltip>
                         </div>
                         <div className={`${styles.status_text_container}`}>
                           <div className={`${styles.status_text}`}>
@@ -161,7 +173,6 @@ const Home = ({ }) => {
           </div>
         </div>
       </div>
-      <ReactTooltip />
     </PageLayout>
   )
 }
