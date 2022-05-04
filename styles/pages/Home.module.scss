@@ -8,3 +8,94 @@
   overflow-x: hidden; 
   background-color: $light;
 }
+
+.home_body { 
+    position: relative;
+    height: 100%; 
+    width: 100vw;
+}
+
+.game_container {
+    position: relative;
+    height: 100%; 
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.column {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.column_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row_card {
+    margin: 10px 0px 0px 10px;
+    background-color: $secondary;
+    width: calc(100% - 10px);
+    border-radius: 5px;
+}
+
+.row_1_card {
+    min-height: 20px;
+}
+
+.row_2_card {
+    min-height: 10%;
+}
+
+.team_status {
+    display: flex;
+    flex-direction: column;
+}
+
+.status_row {
+    width: 100%;
+    height: 50px;
+    padding: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: row;
+}
+.status_row:last-of-type {
+    margin-bottom: 10px;
+}
+
+.status_icon_container {
+    width: 40px;
+    height: 40px;
+}
+
+.status_icon {
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.status_bar_container {
+    width: calc(100% - 60px);
+    height: 40px;
+    margin-left: 10px;
+}
+
+.status_bar {
+    height: 40px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.status_text_container {
+    height: 40px;
+}
+
+.status_text {
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 1000;
+    margin-left: 10px;
+    width: calc(100% - 60px);
+}
